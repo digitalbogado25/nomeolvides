@@ -1,0 +1,96 @@
+* { 
+    font-family: 'Outfit', sans-serif; 
+    box-sizing: border-box; 
+}
+
+/* Contenedor Principal con Gradiente */
+.card-container { 
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%); 
+}
+
+/* Efecto de Brillo en Texto */
+.shimmer-text {
+    background: linear-gradient(90deg, #fff 0%, #c4b5fd 50%, #fff 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer { 
+    0% { background-position: -200% center; } 
+    100% { background-position: 200% center; } 
+}
+
+/* Botones con estilo */
+.cta-button { 
+    background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); 
+    transition: all 0.3s ease; 
+}
+
+.cta-button:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4); 
+}
+
+/* Inputs y Selects */
+.input-field {
+    width: 100%; 
+    padding: 1rem; 
+    border-radius: 1rem; 
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    color: white; 
+    outline: none; 
+    transition: all 0.3s;
+}
+
+.input-field:focus { 
+    border-color: #8b5cf6; 
+    background: rgba(255, 255, 255, 0.1); 
+}
+
+select.input-field option {
+    background: #1e1b4b;
+    color: white;
+}
+
+.input-field::placeholder { 
+    color: rgba(196, 181, 253, 0.4); 
+}
+
+/* Estados y Animaciones */
+.hidden { display: none; }
+
+.fade-up {
+    animation: fadeUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.float-animation { 
+    animation: float 3s ease-in-out infinite; 
+}
+
+@keyframes float { 
+    0%, 100% { transform: translateY(0); } 
+    50% { transform: translateY(-10px); } 
+}
+
+/* Círculos de fondo */
+.decorative-circle {
+    position: absolute; 
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2));
+    filter: blur(40px);
+    z-index: 1;
+}
+
+.tag-badge {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+}

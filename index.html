@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscripción Plan FINES - No Me Olvides</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="h-full m-0 p-0 bg-slate-950">
+  <div class="app-wrapper min-h-full w-full overflow-auto bg-slate-900 flex flex-col items-center justify-center p-4">
+    
+    <div class="card-container relative w-full max-lg rounded-3xl overflow-hidden shadow-2xl">
+      <div class="decorative-circle w-32 h-32 -top-10 -right-10"></div>
+      <div class="decorative-circle w-24 h-24 bottom-20 -left-10"></div>
+      
+      <div class="relative z-10 p-8">
+        <div id="main-content">
+          <div class="text-center mb-6">
+            <div class="inline-block mb-3">
+              <span class="tag-badge text-xs font-semibold text-violet-300 px-4 py-2 rounded-full uppercase tracking-wider"> 🎓 Plan FINES 2026 </span>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-2 shimmer-text">Terminá la Secundaria</h1>
+            <p class="text-violet-300 text-lg font-light">Casa de la Cultura "No Me Olvides"</p>
+          </div>
+
+          <div class="space-y-4 mb-8">
+            <div class="module-card bg-white/5 backdrop-blur-sm rounded-2xl p-5 border border-white/10">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center float-animation">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-white font-bold text-lg">Título Oficial</h3>
+                  <p class="text-violet-200/70 text-sm">Validez nacional y totalmente gratuito.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="module-card bg-white/5 backdrop-blur-sm rounded-2xl p-5 border border-white/10 hover:border-pink-400/50 transition-all">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-pink-500 rounded-xl flex items-center justify-center float-animation" style="animation-delay: 0.5s;">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-white font-bold text-lg">Cerca de tu Casa</h3>
+                  <p class="text-violet-200/70 text-sm">En el corazón de nuestro barrio.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button id="cta-button" class="cta-button text-white font-bold text-lg px-10 py-4 rounded-full w-full">¡Inscribirme Ahora! ✨</button>
+        </div>
+
+        <div id="registration-form" class="hidden fade-up">
+          <div class="text-center mb-6">
+            <h2 class="text-2xl font-bold text-white mb-2">Inscripción</h2>
+            <p class="text-violet-300 text-sm">Completá tus datos para el Plan FINES:</p>
+          </div>
+
+          <form id="google-sheet-form" class="space-y-4">
+            <input type="text" name="nombre" placeholder="Nombre y Apellido" required class="input-field">
+            
+            <div class="grid grid-cols-2 gap-4">
+                <input type="number" name="dni" placeholder="DNI" required class="input-field">
+                <input type="number" name="edad" placeholder="Edad" required class="input-field">
+            </div>
+
+            <input type="email" name="email" placeholder="Correo Electrónico" required class="input-field">
+            <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" required class="input-field">
+            <input type="text" name="ocupacion" placeholder="Ocupación" required class="input-field">
+            <input type="text" name="localidad" placeholder="Localidad" required class="input-field">
+            
+            <select id="estudios-select" name="estudios" required class="input-field">
+              <option value="" disabled selected>Estudios alcanzados</option>
+              <option value="Primaria Incompleta">Primaria Incompleta</option>
+              <option value="Secundaria Incompleta">Secundaria Incompleta</option>
+            </select>
+
+            <div id="detalle-estudios-container" class="hidden fade-up">
+              <input type="text" id="detalle-estudios-input" name="hasta" placeholder="" class="input-field border-violet-500/50">
+              <p class="text-violet-300/50 text-xs mt-1 ml-2">Ejemplo: 4to grado / 2do año</p>
+            </div>
+
+            <button type="submit" class="cta-button text-white font-bold py-4 rounded-full w-full shadow-lg">Confirmar Registro 🚀</button>
+            <button type="button" id="back-btn" class="text-violet-300/60 text-sm w-full mt-2 hover:text-white transition">Volver atrás</button>
+          </form>
+        </div>
+
+        <div id="success-message" class="hidden text-center py-10 fade-up">
+          <div class="text-5xl mb-4">✅</div>
+          <h2 class="text-2xl font-bold text-white mb-2">¡Inscripción Exitosa!</h2>
+          <p class="text-violet-300">Te esperamos en la Casa de la Cultura para empezar.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="mt-8 text-center space-y-3">
+  <div class="flex flex-col items-center justify-center gap-1">
+    <span class="text-[10px] text-violet-400/30 uppercase tracking-[0.2em]">Visitas a la web</span>
+    <div class="bg-white/5 px-4 py-1 rounded-full border border-white/10">
+      <img src="https://profile-counter.glitch.me/fines-no-me-olvides-2026-sergio/count.svg" alt="Visit Counter" class="h-6">
+    </div>
+  </div>
+
+  <p class="text-violet-400/40 text-xs tracking-widest uppercase">
+    Desarrollado por <span class="text-violet-300 font-semibold">Bogado Sergio</span> &copy; 2026
+  </p>
+</footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
